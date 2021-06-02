@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      button,
+      input {
+        padding: 5px;
+        cursor: pointer;
+      }
+      #btnRemoveAll,
+      #btnAdd,
+      .btnRemove {
+        border: none;
+        background: red;
+        color: white;
+      }
+      #btnRemoveAll{
+        margin-top: 20px;
+        display: none;
+      }
+      #btnAdd {
+        background: rgb(14, 167, 194);
+      }
+      .btnRemove {
+        width: 100px;
+      }
+      .show-item {
+        margin-top: 20px;
+        border: 1px solid black;
+        text-align: start;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>To do list</h2>
+    <form class="add">
+      <input type="text" placeholder="Name" id="add" />
+      <button id="btnAdd">Add</button>
+    </form>
+    <button id="btnRemoveAll">Remove All</button>
+    <h2 class="list"></h2>
+
+    <div class="show"></div>
+    <script src="ind.js"></script>
+  </body>
+</html>

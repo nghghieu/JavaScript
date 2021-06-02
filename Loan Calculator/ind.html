@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculation</title>
+    <style>
+        .header {
+            text-align: center;
+        }
+        .form-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: calc(100% - 100px);
+            margin: 0 auto;
+        }
+        .form-group-item {
+            margin-bottom: 10px;
+        }
+        #btn {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: calc(100% - 100px);
+            margin: 0 50px;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <h1>Tính toán khoản vay</h1>
+        <p>Trả trên dư nợ ban đầu</p>
+      </div>
+    <form class="form-group">
+      <div class="form-group-item">
+        <label for="loan">Số tiền vay</label>
+        <input type="number" id="loan" />
+      </div>
+      <div class="form-group-item">
+        <label for="month">Thời hạn vay</label>
+        <input type="number" id="month" />
+      </div>
+      <div class="form-group-item">
+        <label for="rate">Lãi suất cho vay</label>
+        <input type="number" id="rate" />
+      </div>
+      <div class="form-group-item">
+        <label for="disbursementDate">Ngày giải ngân</label>
+        <input type="date" id="disbursementDate" />
+      </div>
+      <div class="form-group-item">
+        <label for="interest">Số tiền lãi phải trả</label>
+        <input type="text" id="interest" readonly/>
+      </div>
+      <div class="form-group-item">
+        <label for="originalAndInterest">Số gốc tiền lãi phải trả</label>
+        <input type="text" id="originalAndInterest" readonly/>
+      </div>
+      <button id="btn">Tính toán khoản vay</button>
+    </form>
+    <table class="form-show" cellpadding="5" border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>#</th>
+            <th>Kì trả nợ</th>
+                <th>Trả gốc</th>
+                <th>Trả lãi</td>
+                <th>Trả gốc và lãi</td>
+                <th>Số gốc còn lại</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    </table>
+    <script src="ind.js"></script>
+  </body>
+</html>

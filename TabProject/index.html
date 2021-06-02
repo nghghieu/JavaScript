@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-content-item {
+            width: 500px;
+            height: 500px;
+            margin-top: 20px;
+            display: none;
+        }
+        .tab-content-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tab-content-item.active {
+            display: block;
+        }
+        .btn {
+            padding : 5px 10px;
+        }
+        .btn.active {
+            background-color: tomato;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-tab">
+        <button class="btn active" id="1">Thor</button>
+        <button class="btn" id="2">Iron Man</button>
+        <button class="btn" id="3">Captain America</button>
+    </div>
+    <div class="tab-content">
+        <div class="tab-content-item active" data-btn="1">
+            <img src="https://gamek.mediacdn.vn/133514250583805952/2020/2/8/photo-1-15810949175856144101.jpg" alt="">
+        </div>
+        <div class="tab-content-item" data-btn="2">
+            <img src="https://genk.mediacdn.vn/139269124445442048/2020/8/19/1ixj6f6tist3lk9r50a-mlw-1597834393035483399421.jpeg" alt="">
+        </div>
+        <div class="tab-content-item" data-btn="3">
+            <img src="https://photo-cms-nghenhinvietnam.zadn.vn/Uploaded/trunghieu/2021_02_22/Captain_America_LIJY.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        const btns = document.querySelectorAll('.btn')
+        const imgItems = document.querySelectorAll('.tab-content-item')
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', e => {
+                btns.forEach(_btn => _btn.classList.remove('active'))
+                e.target.classList.add('active')
+                
+                imgItems.forEach(_img => _img.classList.remove('active'))
+                document.querySelector(`.tab-content-item[data-btn="${e.target.id}"`).classList.add('active')
+            }) 
+        })
+        
+
+    </script>
+</body>
+</html>

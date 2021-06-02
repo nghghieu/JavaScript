@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors</title>
+    <style>
+      .play {
+        display: flex;
+        font-size: 30px;
+        align-items: center;
+      }
+      .computer-box {
+        margin-left: 50px;
+      }
+      .user-box-item,
+      .computer-box {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      #btn {
+          display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="play">
+      <div class="user-box">
+        <div class="user-box-item" id="scissors">✌️</div>
+        <div class="user-box-item" id="rock">✊</div>
+        <div class="user-box-item" id="paper">🖐</div>
+      </div>
+      <div class="computer-box"></div>
+    </div>
+    <div class="alert"></div>
+    <button id="btn">Play Again</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
