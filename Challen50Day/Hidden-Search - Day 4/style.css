@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #a8dadc;
+}
+.center {
+  width: 250px;
+  display: flex;
+  margin: 300px auto;
+}
+input,
+button {
+  outline: none;
+  padding: 5px 10px;
+  border: none;
+  height: 50px;
+  font-size: 20px;
+}
+input {
+  width: 0px;
+  transition: all 0.3s ease;
+}
+button {
+  width: 50px;
+  cursor: pointer;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.input.active {
+  width: 200px;
+  transition: all 0.3s ease;
+}
+.btn.active {
+  transform: translateX(200px);
+  transition: all 0.4s ease;
+}
