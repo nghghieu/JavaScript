@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+.center {
+  display: flex;
+}
+.ps5,
+.xbox {
+  width: 50%;
+  width: 100%;
+  height: 100vh;
+  transition: all 1s ease;
+}
+.ps5 {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 180, 216, 0.4),
+      rgba(2, 62, 138, 0.4)
+    ),
+    url(./ps.jpg) left/cover no-repeat;
+}
+
+.xbox {
+  background: linear-gradient(to bottom, rgba(0, 1, 2, 0.4), rgba(0, 0, 0, 0.4)),
+    url(./xbox.jpg) left/cover no-repeat;
+}
+.title {
+  margin: 150px 0 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 3px;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  padding: 20px 50px;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+.ps5 .btn:hover {
+  background-color: #90e0ef;
+}
+.xbox .btn:hover {
+  background-color: #2b9348;
+}
