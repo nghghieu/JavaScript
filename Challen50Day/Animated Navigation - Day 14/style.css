@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 70px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+  transition: all 0.6s linear;
+  overflow-x: hidden;
+}
+span {
+  transform: translateX(50px) rotateY(180deg);
+  transition: all 0.6s linear;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+  position: relative;
+  cursor: pointer;
+  transform: translateX(-165px);
+  transition: all 0.4s linear;
+}
+.close::after,
+.close::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #6fa8e8;
+  transition: all 0.6s linear;
+}
+.center.active > .close {
+  transform: translateX(0px);
+  transition: all 0.4s linear;
+}
+.center.active {
+  width: 340px;
+}
+.center.active span {
+  transform: translateX(0px) rotateY(0deg);
+}
+.close::after {
+  transform: translateY(10px) rotate(45deg);
+}
+.close::before {
+  bottom: 0;
+  transform: translateY(-8px) rotate(-45deg);
+}
+.center.active .close::after {
+  transform: translateY(5px) rotate(720deg);
+}
+.center.active .close::before {
+  transform: translateY(-5px) rotate(-720deg);
+}
